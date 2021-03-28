@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <style type="text/css">
+            body{
+                background-image: url('static/images/backgroundAbout.jpg');
+            }
+            .about{
+                margin-left: 23%;
+                margin-top: 17%;
+            }
+            p{
+                letter-spacing: 1px;
+                font-size: 150%;
+                color: white;
+            }
+        </style>
+    </head>
+     <body>
+        <div id="page">
+            <div class ='contents'>
+                <ul>
+                    <li><a href = "http://localhost:5000/">Home</a></li>
+                        <li><a class = "active" href = "http://localhost:5000/about">About</a></li>
+                        <li><a href = "http://localhost:5000/sample">Sample Excel sheet</a></li>
+                        <li><a href = "http://localhost:5000/uploader">Download</a></li>
+                </ul>
+            </div>
+            <div class="about">
+                <p>See it Weather is a real time weather application.<br>
+                    User needs to upload an excel file with the city<br> 
+                    names and the units of temperature in which the <br>
+                    user wants the temperature to be displayed.<br>
+                    Complete format of the excel sheet is provided <br>
+                    on <a href = "http://localhost:5000/sample" style="color:grey;text-decoration: none;" >Sample Excel sheet</a>.<br>
+                    User can also download excel sheet with the <br>
+                    updated weather report from the <a href="download.html" style="color:grey;text-decoration: none;">Download</a><br>
+                    section.
+                </p> 
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+.contents ul{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    width: 200px;
+}
+.contents li a{
+    display: block;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 20px;
+}
+.contents li a.active{
+    background-color: #e6aaa5;
+}
+#page div{
+    float: left;
+}
+
+/*body{
+    background-image: url({{ url_for('static', filename='images/backgroundImage.jpg') }});
+    }
+    #upload{
+        margin-left: 15%;
+        margin-top: 28%;
+    }
+    td{
+        font-size: 120%;
+        color: white;
+        font-family: 'Cursive';
+    }*/

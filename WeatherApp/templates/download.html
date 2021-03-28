@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <style type="text/css">
+            body{
+                background-image: url('/static/images/backgroundDownload.jpg'); 
+            }
+            #download{
+                margin-top: 22%;
+                margin-left: 25%;
+                color: white;
+                letter-spacing: 5px;
+                font-size: 140%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <div class ='contents'>
+                <ul>
+                    <li><a href = "http://localhost:5000/">Home</a></li>
+                        <li><a href = "http://localhost:5000/about">About</a></li>
+                        <li><a href = "http://localhost:5000/sample">Sample Excel sheet</a></li>
+                        <li><a class = "active" href = "http://localhost:5000/uploader">Download</a></li>
+                </ul>
+            </div>
+            <div id="download"> 
+                <p>Download sample excel sheet       <a href="{{url_for('download_file',x=1)}}"><button>Download</button> </a><br><br><br><br><br>
+                    Download result        <a href="{{url_for('download_file',x=2)}}"><button>Download</button></a>
+                    {%if error%}<p style="color:red;"> {{error}} </p>{%endif%}
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

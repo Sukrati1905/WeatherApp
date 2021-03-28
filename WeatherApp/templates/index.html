@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+        <style type="text/css">
+            body{
+                background-image: url('/static/images/backgroundImage.jpg');
+            }
+            #upload{
+                margin-left: 15%;
+                margin-top: 28%;
+            }
+            td{
+                font-size: 120%;
+                color: white;
+                font-family: 'Cursive';
+            }
+        </style>
+        <script>
+            function validate() {
+                var x = document.forms["UploadFile"]["xl"].value;
+                if(x == ""){
+                    alert("Please choose a file");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="page">
+            <div class ='contents'>
+                <ul>
+                    <li><a class = "active" href = "http://localhost:5000/">Home</a></li>
+                        <li><a href = "http://localhost:5000/about">About</a></li>
+                        <li><a href = "http://localhost:5000/sample">Sample Excel sheet</a></li>
+                        <li><a href = "http://localhost:5000/uploader">Download</a></li>
+                </ul>
+            </div>
+            <div id="upload">   
+                <form action="http://localhost:5000/uploader" name="UploadFile" method="POST" enctype = "multipart/form-data">
+                    <table>
+                        <tr>
+                            <td>Upload Excel-sheet</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="file" multiple=false accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" id="xl" name="xl" /><span id="sp"></span></td>
+                            <td></td>
+                            <td></td>
+                            <td><input type="submit" value="Go" onclick="return validate()" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+In order to run this application user needs to install the following dependencies:
+1. flask
+2. werkzeug
+3. openpyxl
